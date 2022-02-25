@@ -1,0 +1,2 @@
+Design Document for Space Shooting Game.
+Introduction: PLayer is in Spaceship need to destroy enemy ships and astroids.
