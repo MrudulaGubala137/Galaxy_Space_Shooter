@@ -6,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     // Start is called before the first frame update
     public float speed;
+    public GameObject shootPrefab;
+    public Vector3 offset;
     void Start()
     {
         
@@ -35,6 +37,10 @@ public class PlayerMovement : MonoBehaviour
         else if(transform.position.x <- 7.0f)
         {
             transform.position = new Vector3(-7.0f, transform.position.y, 0);
+        }
+        if(Input.GetMouseButtonDown(0))
+        {
+            Instantiate(shootPrefab,transform.position+offset,Quaternion.identity);
         }
         
 
