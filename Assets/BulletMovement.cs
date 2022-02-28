@@ -6,10 +6,14 @@ public class BulletMovement : MonoBehaviour
 {
     public float bulletSpeed;
     public float time;
+    public AudioSource explosionSound;
+    public AudioClip audioClipBomb;
+  
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        explosionSound= GameObject.Find("SoundManager").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -21,6 +25,17 @@ public class BulletMovement : MonoBehaviour
         if(time>3.0f)
         {
             Destroy(gameObject);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "asteroid")
+        {
+            Destroy(collision.gameObject);
+            explosionSound.clip = audioClipBomb;
+            explosionSound.Play();
+            GameObject.Find("ScoreManager").GetComponent<ScoreManagerScript>().Score(5);
         }
     }
 }

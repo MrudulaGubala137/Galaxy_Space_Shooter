@@ -7,6 +7,9 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     public float speed;
     public GameObject shootPrefab;
+    public Vector3 offset;
+    public AudioSource bulletSound;
+    public AudioClip audioClip;
     void Start()
     {
         
@@ -39,7 +42,18 @@ public class PlayerMovement : MonoBehaviour
         }
         if(Input.GetMouseButtonDown(0))
         {
-            Instantiate(shootPrefab,transform.position,Quaternion.identity);
+            Instantiate(shootPrefab,transform.position+offset,Quaternion.identity);
+            
+
+            bulletSound.clip = audioClip;
+            bulletSound.Play();
+        }
+        else if(Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(shootPrefab, transform.position + new Vector3(-0.05f, -0.4f,0f),Quaternion.identity);
+            Instantiate(shootPrefab, transform.position + new Vector3(-6.5f, 0f, 0f), Quaternion.identity);
+            Instantiate(shootPrefab, transform.position + new Vector3(0.05f, -0.4f, 0f), Quaternion.identity);
+
         }
         
 

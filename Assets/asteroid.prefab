@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 5650412199832501655}
   - component: {fileID: 5650412199832501652}
   - component: {fileID: 5650412199832501654}
-  - component: {fileID: 5650412199832501657}
-  - component: {fileID: -1077837425226196430}
+  - component: {fileID: -8501126300468998840}
+  - component: {fileID: -1813900521198958034}
   m_Layer: 0
   m_Name: asteroid
   m_TagString: asteroid
@@ -98,7 +98,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AstroidSpeed: 3
---- !u!60 &5650412199832501657
+--- !u!50 &-8501126300468998840
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5650412199832501653}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!60 &-1813900521198958034
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,24 +153,3 @@ PolygonCollider2D:
       - {x: 0.175, y: -0.095}
       - {x: 0.175, y: 0.055}
       - {x: 0.145, y: 0.145}
---- !u!50 &-1077837425226196430
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5650412199832501653}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
