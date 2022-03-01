@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -50,12 +51,20 @@ public class PlayerMovement : MonoBehaviour
         }
         else if(Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(shootPrefab, transform.position + new Vector3(-0.05f, -0.4f,0f),Quaternion.identity);
-            Instantiate(shootPrefab, transform.position + new Vector3(-6.5f, 0f, 0f), Quaternion.identity);
-            Instantiate(shootPrefab, transform.position + new Vector3(0.05f, -0.4f, 0f), Quaternion.identity);
+            Instantiate(shootPrefab, transform.position + new Vector3(-0.5f, -0.4f,0f)+offset,Quaternion.identity);
+            Instantiate(shootPrefab, transform.position + offset, Quaternion.identity);
+            Instantiate(shootPrefab, transform.position + new Vector3(0.5f, 0.4f, 0f)+offset, Quaternion.identity);
+            bulletSound.clip = audioClip;
+            bulletSound.Play();
 
         }
-        
+        }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "asteroid")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
+        }
     }
 }

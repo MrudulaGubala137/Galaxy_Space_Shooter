@@ -536,6 +536,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   shootPrefab: {fileID: 6920329886076802063, guid: 539871ca8a0732a499280b46118d943c, type: 3}
+  offset: {x: 0.7, y: 0, z: 0}
   bulletSound: {fileID: 382834137}
   audioClip: {fileID: 8300000, guid: 6d45808a8406d43458d007540470f1ea, type: 3}
 --- !u!60 &1572183696
@@ -587,11 +588,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5650412199832501655, guid: e068234ff406ad9419a265bd1d801d26, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.250003
+      value: -5.86
       objectReference: {fileID: 0}
     - target: {fileID: 5650412199832501655, guid: e068234ff406ad9419a265bd1d801d26, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.03555078
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 5650412199832501655, guid: e068234ff406ad9419a265bd1d801d26, type: 3}
       propertyPath: m_LocalPosition.z
